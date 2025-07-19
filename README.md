@@ -12,7 +12,7 @@ The main purpose of this project is to:
 
 ## Project Phases & Methodology
 
-The project followed a comprehensive approach, encompassing data preprocessing, customer segmentation and targeted promotion generation.
+The project followed a comprehensive approach, which was encompassing data preprocessing, customer segmentation and targeted promotion generation.
 
 ### 1. Exploratory Data Analysis and Preprocessing
 * **Data Loading & Visualization:** Initial loading of customer information and visualization of customer locations using a map.
@@ -34,13 +34,13 @@ The project followed a comprehensive approach, encompassing data preprocessing, 
     * **Tandem Approach 2: SOM (Self-Organizing Maps) + Hierarchical Clustering:** SOM was implemented first, followed by Agglomerative Clustering. Also resulted in **10 clusters**.
 * **Final Cluster Determination:** A confusion matrix was used to compare the agreement between K-Means and SOM results. Another Hierarchical Clustering was performed on the means of the other variables based on these initial clusters.
 * **Refining Clusters:** Initially, 9 clusters were chosen. Due to a large, unseparated "Cluster 0" in UMAP visualizations, it was further broken down into 5 sub-clusters, resulting in a total of **13 final clusters**.
-* **Cluster Naming:** Customized names were assigned to the 10 main clusters based on their characteristics (e.g., Fake Vegetarians, Millennials, Gamer Parents, Misers, Local Folks, Youngsters, Balanced Parents, Settled Techies, Stingy Pescatarians, Retired Elders).
+* **Cluster Naming:** Customized names were assigned to the 10 main clusters based on their characteristics (Fake Vegetarians, Millennials, Gamer Parents, Misers, Local Folks, Youngsters, Balanced Parents, Settled Techies, Stingy Pescatarians, Retired Elders).
 
 ### 3. Targeted Promotions (Association Rules)
 * **Data Integration:** Joined the final cluster assignments with customer transaction data (`cust_basket`).
 * **Cluster-Specific Analysis:** Filtered transaction data by cluster to generate customized promotions.
-* **Apriori Algorithm:** Applied the Apriori algorithm and `association_rules` to identify frequent itemsets and strong association rules (based on support, confidence, and lift values).
-* **Promotions Suggested:** Specific promotions were tailored for each identified cluster (e.g., "Soup Lovers" for Fake Vegetarians, "Overenergize" for Millennials, "Grape Expectations" for Misers).
+* **Apriori Algorithm:** Applied the Apriori algorithm and `association_rules` to identify frequent itemsets and strong association rules (based on support, confidence and lift values).
+* **Promotions Suggested:** Specific promotions were tailored for each identified cluster (e.g., "Soup Lovers" for Fake Vegetarians, "Overenergize" for Millennials, "Grape Expectations" for Misers and more).
 
 ## Conclusion
 
